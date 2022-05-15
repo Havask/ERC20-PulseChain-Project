@@ -1,3 +1,4 @@
+import Modal from '../elements/Modal';
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -34,6 +35,8 @@ const Header = ({
 
   const nav = useRef(null);
   const hamburger = useRef(null);
+  const [ModalActive, setModalActive] = useState(false);
+
 
   useEffect(() => {
     isActive && openMenu();
@@ -73,6 +76,16 @@ const Header = ({
     bottomOuterDivider && 'has-bottom-divider',
     className
   );
+
+  const openModal = (e) => {
+    e.preventDefault();
+    setModalActive(true);
+  }
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setModalActive(false);
+  }   
 
   return (
     <header
@@ -127,6 +140,11 @@ const Header = ({
               </nav>
             </>}
         </div>
+        <Modal
+            id="video-modal"
+            show={ModalActive}
+            handleClose={closeModal}
+           />
       </div>
     </header>
   );

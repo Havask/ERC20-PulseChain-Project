@@ -5,6 +5,7 @@ import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Countdown from 'react-countdown';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -73,19 +74,16 @@ const FeaturesSplit = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <Countdownstyle className="center-content">
 
-          <Countdown date={Date.now() + 10000000} />
+          <Countdown date={Date.now() + 7776000000} />
           </Countdownstyle>
 
           <div className={splitClasses}>
-
-
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
-
                 </div >
                   <h3 className="center-content">
-                    How to claim:
+                    
                   </h3>
               </div>
             </div>
@@ -99,13 +97,14 @@ const FeaturesSplit = ({
                 Easy as 1-2-3! 
                   </h3>
                 <p className="m-0">
-                  1. Connect meta mask to PulseChain
+                    1. Connect your MetaMask to PulseChain network
                 </p>
                   <p className="m-0">
-                  2. Buy PulseX
+                    2. Buy <Link href="https://pulsex.com/" > PulseX </Link>
                   </p>
                   <p className="m-0">
-                  3. Stake PulseX
+                    
+                   3.  Claim
                   </p>
 
               </div>
@@ -133,7 +132,7 @@ const FeaturesSplit = ({
                 Claiming
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Claiming is made very easy. We only need the public address to send to, no other information. If eligable you will recieve the coins in a heartbeat. 
                   </p>
               </div>
               <div className={
@@ -150,7 +149,6 @@ const FeaturesSplit = ({
               </div>
             </div>
 
-
             <div className="split-item">
               <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
                 <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
@@ -160,7 +158,8 @@ const FeaturesSplit = ({
                 Burning
                   </h3>
                 <p className="m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  By removing CryptoHearts from circulation, which will drastically reduce the number of coins, we can be assured that the total amount of coins are inside a community we trust. 
+                  The coins are sent to a wallet address that cannot be used for transactions other than receiving the coins.
                   </p>
               </div>
               <div className={
@@ -171,6 +170,37 @@ const FeaturesSplit = ({
                 data-reveal-container=".split-item">
                 <Image
                   src={require('./../../assets/images/burning.png')}
+                  alt="Features split 03"
+                  width={528}
+                  height={396} />
+              </div>
+            </div>
+
+            <div className="split-item">
+              <div className="split-item-content center-content-mobile reveal-from-left" data-reveal-container=".split-item">
+                <div className="text-xxs text-color-primary fw-600 tt-u mb-8">
+                  
+                  </div>
+                <h3 className="mt-0 mb-12">
+                Longevity
+                  </h3>
+                <p className="m-0">
+                  CryptoHeart is to be a currency that is not controlled by any single entity, that is immune to attacks and decentralized. 
+                  
+                  We believe high transaction fees are a barrier to the crypto network expansion. 
+                  
+                  Combine this with all the benefits with being on the pulsechain we are confident that CryptoHeart will be able to
+                  compete and last in the cryptoworld
+                  </p>
+              </div>
+              <div className={
+                classNames(
+                  'split-item-image center-content-mobile reveal-from-bottom',
+                  imageFill && 'split-item-image-fill'
+                )}
+                data-reveal-container=".split-item">
+                <Image
+                  src={require('./../../assets/images/long.jpeg')}
                   alt="Features split 03"
                   width={528}
                   height={396} />

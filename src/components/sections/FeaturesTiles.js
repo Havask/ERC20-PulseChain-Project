@@ -45,7 +45,7 @@ const FeaturesTiles = ({
   );
 
   const sectionHeader = {
-    title: 'Why Heartcoin?',
+    title: 'Why CryptoHeart?',
   };
 
   return (
@@ -74,7 +74,7 @@ const FeaturesTiles = ({
                     Better for the environment
                     </h4>
                   <p className="m-0 text-sm">
-                  Proof of stake uses very little energy to secure a blockchain. By removing the need for mining the energy can be saved and electronic waste are spared. 
+                  Proof of stake uses very little energy to secure a blockchain. So by removing the need for mining the energy can be saved and electronic waste are spared. 
                     </p>
                 </div>
               </div>
@@ -96,7 +96,7 @@ const FeaturesTiles = ({
                   Lower transaction fees
                     </h4>
                   <p className="m-0 text-sm">
-                    Migrating to the PulseChain network saves you from high gas fees on the etherium network 
+                    Migrating to the PulseChain network will save you from the high gas fees on the etherium network. 
                     </p>
                 </div>
               </div>
@@ -118,7 +118,7 @@ const FeaturesTiles = ({
                   Higher throughput
                     </h4>
                   <p className="m-0 text-sm">
-                    Without complex computer problems, transactions speeds can be increased. 
+                    Without complex computer problems to solve, each transaction can be executed faster. 
                     </p>
                 </div>
               </div>
@@ -140,7 +140,7 @@ const FeaturesTiles = ({
                     Burning the unclaimed
                     </h4>
                   <p className="m-0 text-sm">
-                    100% of all the unclaimed coins will be burned after the first phase. 
+                    100% of all the unclaimed coins will be burned after this first phase and deflating the coin. 
                     </p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const FeaturesTiles = ({
                     Free to claim
                     </h4>
                   <p className="m-0 text-sm">
-                    Everyone holding PulseX on (insert date) will be able to claim HeartCoins
+                    Everyone who sacrified PulseX will be able to claim CryptoHearts, free of charge.
                   </p>
                 </div>
               </div>

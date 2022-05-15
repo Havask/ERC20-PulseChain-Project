@@ -4,7 +4,6 @@ import { SectionProps } from '../../utils/SectionProps';
 import ButtonGroup from '../elements/ButtonGroup';
 import Button from '../elements/Button';
 import Countdown from 'react-countdown';
-
 const propTypes = {
   ...SectionProps.types
 }
@@ -60,7 +59,7 @@ const Hero = ({
         <div className={innerClasses}>
           <div className="hero-content">
             <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-              Welcome to <span className="blue-fade" >HeartCoin</span>
+              Welcome to <span className="blue-fade" >CryptoHeart</span>
             </h1>
             
             <div className="container-xs">
