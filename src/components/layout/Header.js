@@ -3,13 +3,11 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  BrowserRouter as
   Link
 } from "react-router-dom";
 
-import Logo from './partials/Logo';
+
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -93,16 +91,6 @@ const Header = ({
     setModalActive(false);
   }   
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
 
   return (
     <header

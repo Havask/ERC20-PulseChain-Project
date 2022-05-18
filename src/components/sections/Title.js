@@ -2,15 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import PropTypes from 'prop-types';
-import ButtonGroup from '../elements/ButtonGroup';
-import Button from '../elements/Button';
-import Countdown from 'react-countdown';
 import Modal from '../elements/Modal';
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  BrowserRouter as
   Link
 } from "react-router-dom";
 
@@ -42,7 +37,6 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
-
   navPosition,
   hideNav,
   hideSignin,
@@ -50,8 +44,6 @@ const Hero = ({
 
   ...props
 }) => {
-
-
 
   const [isActive, setIsactive] = useState(false);
 
@@ -104,16 +96,6 @@ const Hero = ({
     setModalActive(false);
   }   
 
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-    },
-  };
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -206,7 +188,7 @@ const Hero = ({
             
             <div className="container-xs">
               <p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-                The next generation cryptocurrency is here. 
+                Next generation cryptocurrency, for free. 
                 </p>
             </div>
             

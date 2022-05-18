@@ -1,10 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect} from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
 import ReactGA from 'react-ga';
 import LayoutDefault from './layouts/LayoutDefault';
-import { initializeApp } from "firebase/app";
 import Home from './views/Home';
 
 
@@ -40,8 +39,6 @@ const App = () => {
   }, [location]);
 
  
-  
-
   return (
     <ScrollReveal
       ref={childRef}

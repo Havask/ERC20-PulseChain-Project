@@ -59,11 +59,10 @@ const FeaturesSplit = ({
   const Countdownstyle = styled.div`
   span {
     color: purple;
-    font-size: 350%; 
+    font-size: 300%; 
     
   }
 `;
-
 
 
   return (
