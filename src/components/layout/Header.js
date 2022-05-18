@@ -2,7 +2,13 @@ import Modal from '../elements/Modal';
 import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Logo from './partials/Logo';
 
 const propTypes = {
@@ -87,6 +93,17 @@ const Header = ({
     setModalActive(false);
   }   
 
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
   return (
     <header
       {...props}
@@ -98,19 +115,11 @@ const Header = ({
             'site-header-inner',
             bottomDivider && 'has-bottom-divider'
           )}>
-          <Logo />
+           <li>
+                      <Link to="#0" onClick={openModal}>White paper</Link>
+                    </li>
           {!hideNav &&
             <>
-              <button
-                ref={hamburger}
-                className="header-nav-toggle"
-                onClick={isActive ? closeMenu : openMenu}
-              >
-                <span className="screen-reader">Menu</span>
-                <span className="hamburger">
-                  <span className="hamburger-inner"></span>
-                </span>
-              </button>
               <nav
                 ref={nav}
                 className={
@@ -124,26 +133,28 @@ const Header = ({
                       'list-reset text-xs',
                       navPosition && `header-nav-${navPosition}`
                     )}>
-                    <li>
-                      <Link to="#0" onClick={closeMenu}>White paper</Link>
-                    </li>
+                   
                   </ul>
                   {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Link to="#0" className="button button-primary button-wide-mobile button-sm" onClick={closeMenu}>Claim here</Link>
+                        <a onClick={() => window.location.replace("/#about")} className="button button-primary button-wide-mobile button-sm"> Claim here </a>
                       </li>
                     </ul>}
                 </div>
               </nav>
             </>}
         </div>
+                    
         <Modal
             id="video-modal"
             show={ModalActive}
             handleClose={closeModal}
+            pdf="http://www.africau.edu/images/default/sample.pdf"
+            pdfTag="iframe" 
+          
            />
       </div>
     </header>

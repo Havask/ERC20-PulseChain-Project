@@ -1,10 +1,10 @@
 import React from 'react';
 // import sections
-import Hero from '../components/sections/Hero';
-import FeaturesTiles from '../components/sections/FeaturesTiles';
-import FeaturesSplit from '../components/sections/FeaturesSplit';
-import Testimonial from '../components/sections/Testimonial';
-import Cta from '../components/sections/Cta';
+import Hero from '../components/sections/Title';
+import FeaturesTiles from '../components/sections/Features';
+import FeaturesSplit from '../components/sections/Steps';
+
+import Cta from '../components/sections/Claim';
 
 const Home = () => {
 

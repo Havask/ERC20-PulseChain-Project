@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useLocation, Switch } from 'react-router-dom';
 import AppRoute from './utils/AppRoute';
 import ScrollReveal from './utils/ScrollReveal';
@@ -6,6 +6,7 @@ import ReactGA from 'react-ga';
 import LayoutDefault from './layouts/LayoutDefault';
 import { initializeApp } from "firebase/app";
 import Home from './views/Home';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAnNKbVHwwNmXuhV_nppGNHREhVmuqPag8",
@@ -17,9 +18,6 @@ const firebaseConfig = {
   measurementId: "G-B3BYL8Y028"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
 // Initialize Google Analytics
 ReactGA.initialize(process.env.REACT_APP_GA_CODE);
 
@@ -27,8 +25,6 @@ const trackPage = page => {
   ReactGA.set({ page });
   ReactGA.pageview(page);
 };
-
-
 
 const App = () => {
 
@@ -42,6 +38,9 @@ const App = () => {
     trackPage(page);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
+
+ 
+  
 
   return (
     <ScrollReveal

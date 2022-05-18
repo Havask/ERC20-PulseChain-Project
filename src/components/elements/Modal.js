@@ -25,8 +25,8 @@ const Modal = ({
   handleClose,
   show,
   closeHidden,
-  video,
-  videoTag,
+  pdf,
+  pdfTag,
   ...props
 }) => {
 
@@ -62,52 +62,51 @@ const Modal = ({
   const classes = classNames(
     'modal',
     show && 'is-active',
-    video && 'modal-video',
+    pdf && 'modal-video',
     className
   );
 
   return (
     <>
-      {show &&
-        <div
-          {...props}
-          className={classes}
-          onClick={handleClose}
-        >
-          <div className="modal-inner" onClick={stopProgagation}>
-            {video ?
-              <div className="responsive-video">
-                {videoTag === 'iframe' ?
-                  <iframe
-                    title="video"
-                    src={video}
-                    frameBorder="0"
-                    allowFullScreen
-                  ></iframe> :
-                  <video
-                    v-else
-                    controls
-                    src={video}
-                  ></video>
-                }
-              </div> :
-              <>
-                {!closeHidden &&
-                  <button
-                    className="modal-close"
-                    aria-label="close"
-                    onClick={handleClose}
-                  ></button>
-                }
-                <div className="modal-content">
-                  {children}
-                </div>
-              </>
-            }
-          </div>
+    {show &&
+      <div
+        {...props}
+        className={classes}
+        onClick={handleClose}
+      >
+        <div className="modal-inner" onClick={stopProgagation}>
+          {pdf ?
+            <div className="responsive-video">
+              {pdfTag === 'iframe' ?
+                <iframe
+                  title="whitepaper"
+                  src={pdf}
+                  allowFullScreen
+             
+                ></iframe> :
+                <pdf
+                  src={"../../assets"}
+                  allowFullScreen
+                ></pdf>
+              }
+            </div> :
+            <>
+              {!closeHidden &&
+                <button
+                  className="modal-close"
+                  aria-label="close"
+                  onClick={handleClose}
+                ></button>
+              }
+              <div className="modal-content">
+                {children}
+              </div>
+            </>
+          }
         </div>
-      }
-    </>
+      </div>
+    }
+  </>
   )
 }
 
