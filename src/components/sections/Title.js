@@ -2,14 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
 import PropTypes from 'prop-types';
+import ButtonGroup from '../elements/ButtonGroup';
+import Button from '../elements/Button';
+import Countdown from 'react-countdown';
 import Modal from '../elements/Modal';
-
 import {
-  BrowserRouter as
-  Link
+  BrowserRouter as Router, Switch, Route, Link
 } from "react-router-dom";
-
-
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -40,17 +39,14 @@ const Hero = ({
   navPosition,
   hideNav,
   hideSignin,
-
-
   ...props
 }) => {
 
-  const [isActive, setIsactive] = useState(false);
 
+  const [isActive, setIsactive] = useState(false);
   const nav = useRef(null);
   const hamburger = useRef(null);
   const [ModalActive, setModalActive] = useState(false);
-
 
   useEffect(() => {
     isActive && openMenu();
@@ -96,6 +92,16 @@ const Hero = ({
     setModalActive(false);
   }   
 
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
 
   const outerClasses = classNames(
     'hero section center-content',
@@ -168,14 +174,13 @@ const Hero = ({
             </>}
         </div>
                     
-        <Modal
-            id="video-modal"
-            show={ModalActive}
-            handleClose={closeModal}
-            pdf={require("../../assets/CryptoHearts.pdf")}
-            pdfTag="iframe"   
-          
-           />
+      <Modal
+          id="video-modal"
+          show={ModalActive}
+          handleClose={closeModal}
+          pdf={require("../../assets/CryptoHearts.pdf")}
+          pdfTag="iframe"   
+      />
       </div>
     </header>
 

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { SectionProps } from '../../utils/SectionProps';
-import Input from '../elements/Input';
 import Button from "../elements/Button"
 import { ethers } from "ethers";
+import axios from 'axios'; 
 
 const propTypes = {
   ...SectionProps.types,
@@ -60,7 +60,7 @@ const Cta = ({
 
     // Asking if metamask is already present or not
     if (window.ethereum) {
-      console.log("Nothing returned")
+      console.log("Already connected")
       // res[0] for fetching a first wallet
       window.ethereum
         .request({ method: "eth_requestAccounts" })
@@ -71,28 +71,30 @@ const Cta = ({
     }
   };
 
-  const ClaimHandler = () => {
+  async function ClaimHandler () {
 
-    //sjekk først om accounten har heartcoin i balsenen 
 
-    //Gå til etherscan å finn ut om de har sacrificed
+  //Sjekk først om man har mottat CryptoHearts fra før av 
 
-    const balance = fetch("https://scan.v2b.testnet.pulsechain.com/api",{
+    const PulseChainBalance = await axios({
+      method: 'post',
+      url: 'https://scan.v2b.testnet.pulsechain.com/api/eth-rpc',
+      data: {
+        "id": 0,
+        "jsonrpc": "2.0",
+        "method": "eth_getBalance",
+        "params": [
+          "0x9EC621D39d2e989e46A5730C3B3073543509017A",
+          "latest"
+         ]
+      }
+    });
 
-      "id": "0xE92A29Ab047a23Ab68a18969503ee807F1A9C453",
-      "jsonrpc": "2.0",
-      "method": "eth_getBalance",
-      "params": [
-        "0x0000000000000000000000000000000000000007",
-        "latest"
-       ],
-      method: "POST"
-    })  
+    console.log("result", PulseChainBalance.data.result)
 
-    setBalance(balance)
-
-    console.log("balance")
-    console.log(balance)
+   
+    console.log("PulseChain balance: ",PulseChainBalance)
+ 
   };
   // getbalance function for getting a balance in
   // a right format with help of ethers
@@ -154,6 +156,8 @@ const ClaimButton = () => {
     }
 };
 
+
+
   return (
     <section
       {...props}
@@ -162,10 +166,11 @@ const ClaimButton = () => {
       <div className="container">
         <div
           className={innerClasses}
-        >
+          >
+     
+       <ClaimButton/>
           <div className="cta-slogan" id="about">
-            <ClaimButton/>
-            
+       
           </div>  
           <div className="cta-action">
             <ConnectButton/>

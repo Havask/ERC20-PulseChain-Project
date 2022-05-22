@@ -73,7 +73,7 @@ const FeaturesTiles = ({
                     Better for the environment
                     </h4>
                   <p className="m-0 text-sm">
-                  Proof of stake uses very little energy to secure a blockchain. So by removing the need for mining the energy can be saved and electronic waste are spared. 
+                    By replacing the need for mining with proof of stake a lot of energy and electronic waste are spared.
                     </p>
                 </div>
               </div>
@@ -139,8 +139,8 @@ const FeaturesTiles = ({
                     Burning the unclaimed
                     </h4>
                   <p className="m-0 text-sm">
-                    100% of all the unclaimed coins will be burned after this first phase and deflating the coin. 
-                    </p>
+                    100% of all the unclaimed tokens will be burned after the minting phase.
+                  </p>
                 </div>
               </div>
             </div>
@@ -161,7 +161,8 @@ const FeaturesTiles = ({
                     Free to claim
                     </h4>
                   <p className="m-0 text-sm">
-                    Everyone who sacrified PulseX will be able to claim CryptoHearts, free of charge.
+                  Everyone who sacrified to PulseChain  will be eligible to claim 10 000 CryptoHearts. Only 500 million tokens will ever be minted.
+
                   </p>
                 </div>
               </div>
@@ -183,7 +184,7 @@ const FeaturesTiles = ({
                   Longevity
                     </h4>
                   <p className="m-0 text-sm">
-                  By developing this on the PulseChain we are confident for the longevity of this project.                     </p>
+                    By developing this on the PulseChain we are confident for the longevity of this project.                     </p>
                 </div>
               </div>
             </div>

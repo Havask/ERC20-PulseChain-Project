@@ -75,7 +75,7 @@ const FeaturesSplit = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <Countdownstyle className="center-content">
 
-          <Countdown date={Date.now() + 7776000000} />
+          <Countdown date={Date.now() + 6393600000} />
           </Countdownstyle>
 
           <div className={splitClasses}>
@@ -98,14 +98,14 @@ const FeaturesSplit = ({
                 Easy as 1-2-3! 
                   </h3>
                 <p className="m-0">
-                    1. Connect your MetaMask to PulseChain network
+                    1. Connect your MetaMask.
                 </p>
                   <p className="m-0">
-                    2. Buy <Link href="https://pulsex.com/" > PulseX </Link>
+                    2. Sacrifice to <Link href="https://pulsex.com/" > PulseChain. </Link>
                   </p>
                   <p className="m-0">
                     
-                   3.  Claim
+                    3.  Claim 10 000 CryptoHearts!
                   </p>
 
               </div>
@@ -117,7 +117,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/PulseX.svg')}
+                  src={require('./../../assets/images/pulse.jpeg')}
                   alt="Features split 02"
                   width={528}
                   height={396} />
@@ -133,7 +133,7 @@ const FeaturesSplit = ({
                 Claiming
                   </h3>
                 <p className="m-0">
-                  Claiming is made very easy. We only need the public address to send to, no other information. If eligable you will recieve the coins in a heartbeat. 
+                  Claiming is no hassle. MetaMask connects through the browser and the public address is used to check the testnet for the sacrifies. If eligable 10 000 CrytoHearts will be appear in your wallet in a heartbeat. 
                   </p>
               </div>
               <div className={
@@ -143,7 +143,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/claimed.jpeg')}
+                  src={require('./../../assets/images/mask.jpeg')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
@@ -159,8 +159,9 @@ const FeaturesSplit = ({
                 Burning
                   </h3>
                 <p className="m-0">
-                  By removing CryptoHearts from circulation, which will drastically reduce the number of coins, we can be assured that the total amount of coins are inside a community we trust. 
-                  The coins are sent to a wallet address that cannot be used for transactions other than receiving the coins.
+
+                  All the unclaimed tokens will permanently be taken out of circulation. This will reduce the quantity and deflate the value of each coin. 
+                  These unclaimed tokens are to be transferred into a frozen private address which will be impossible to recover. 
                   </p>
               </div>
               <div className={
@@ -170,7 +171,7 @@ const FeaturesSplit = ({
                 )}
                 data-reveal-container=".split-item">
                 <Image
-                  src={require('./../../assets/images/burning.png')}
+                  src={require('./../../assets/images/burning.avif')}
                   alt="Features split 03"
                   width={528}
                   height={396} />
@@ -186,12 +187,9 @@ const FeaturesSplit = ({
                 Longevity
                   </h3>
                 <p className="m-0">
-                  CryptoHeart is to be a currency that is not controlled by any single entity, that is immune to attacks and decentralized. 
-                  
-                  We believe high transaction fees are a barrier to the crypto network expansion. 
-                  
-                  Combine this with all the benefits with being on the pulsechain we are confident that CryptoHeart will be able to
-                  compete and last in the cryptoworld
+                  By developing on the PulseChain network we are confident in the longevity and prosperity of this
+                  project. PulseChain network are at bleeding edge of blockchain techonology and much better suited for 
+                  the future, compared to other networks. 
                   </p>
               </div>
               <div className={
@@ -207,7 +205,6 @@ const FeaturesSplit = ({
                   height={396} />
               </div>
             </div>
-
           </div>
         </div>
       </div>
