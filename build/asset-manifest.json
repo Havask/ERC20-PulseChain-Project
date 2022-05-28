@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.f192f8dc.chunk.css",
-    "main.js": "/static/js/main.52cca00f.chunk.js",
-    "main.js.map": "/static/js/main.52cca00f.chunk.js.map",
+    "main.js": "/static/js/main.27f557e2.chunk.js",
+    "main.js.map": "/static/js/main.27f557e2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.b8b9f84b.js",
     "runtime-main.js.map": "/static/js/runtime-main.b8b9f84b.js.map",
-    "static/js/2.d84aa004.chunk.js": "/static/js/2.d84aa004.chunk.js",
-    "static/js/2.d84aa004.chunk.js.map": "/static/js/2.d84aa004.chunk.js.map",
+    "static/js/2.fff7d6b5.chunk.js": "/static/js/2.fff7d6b5.chunk.js",
+    "static/js/2.fff7d6b5.chunk.js.map": "/static/js/2.fff7d6b5.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.9cefdc54e28b3e8089d965f766607e02.js": "/precache-manifest.9cefdc54e28b3e8089d965f766607e02.js",
+    "precache-manifest.3c8888fd621a33c67148d53255f707a0.js": "/precache-manifest.3c8888fd621a33c67148d53255f707a0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.f192f8dc.chunk.css.map": "/static/css/main.f192f8dc.chunk.css.map",
-    "static/js/2.d84aa004.chunk.js.LICENSE.txt": "/static/js/2.d84aa004.chunk.js.LICENSE.txt",
+    "static/js/2.fff7d6b5.chunk.js.LICENSE.txt": "/static/js/2.fff7d6b5.chunk.js.LICENSE.txt",
     "static/media/CryptoHeartLogo.png": "/static/media/CryptoHeartLogo.2648d1c3.png",
     "static/media/CryptoHearts.pdf": "/static/media/CryptoHearts.c5fae1f3.pdf",
     "static/media/burning.avif": "/static/media/burning.7908f0fb.avif",
@@ -28,8 +28,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.b8b9f84b.js",
-    "static/js/2.d84aa004.chunk.js",
+    "static/js/2.fff7d6b5.chunk.js",
     "static/css/main.f192f8dc.chunk.css",
-    "static/js/main.52cca00f.chunk.js"
+    "static/js/main.27f557e2.chunk.js"
   ]
 }

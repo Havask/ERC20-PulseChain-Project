@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
@@ -53,7 +53,7 @@ const FeaturesSplit = ({
   );
 
   const sectionHeader = {
-    title: 'AirDrop Phase:',
+    title: 'AirDrop phase begins when PulseChain launches:',
   };
 
   const Countdownstyle = styled.div`
@@ -63,6 +63,18 @@ const FeaturesSplit = ({
     
   }
 `;
+
+const [Count, setCount] = useState(6393600000);
+
+// form submit handler
+const KeepCount = () => {
+
+  let newTime = Count - 1 
+
+  setCount(newTime)
+
+  return Date.now() + newTime ; 
+};
 
 
   return (
@@ -75,7 +87,7 @@ const FeaturesSplit = ({
           <SectionHeader data={sectionHeader} className="center-content" />
           <Countdownstyle className="center-content">
 
-          <Countdown date={Date.now() + 6393600000} />
+          <Countdown date={Date.now()} />
           </Countdownstyle>
 
           <div className={splitClasses}>

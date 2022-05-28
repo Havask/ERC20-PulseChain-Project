@@ -35,7 +35,8 @@ const defaultProps = {
   size: '',
   placeholder: '',
   rows: 3,
-  hint: null
+  hint: null,
+  onChange: null,
 }
 
 const Input = ({
@@ -54,6 +55,7 @@ const Input = ({
   placeholder,
   rows,
   hint,
+  onChange,
   ...props
 }) => {
 
@@ -70,6 +72,7 @@ const Input = ({
   );
 
   const Component = type === 'textarea' ? 'textarea' : 'input';
+
   return (
     <>
       {label && <FormLabel labelHidden={labelHidden} id={props.id}>{label}</FormLabel>}
@@ -85,6 +88,7 @@ const Input = ({
           value={value}
           placeholder={placeholder}
           rows={type === 'textarea' ? rows : null}
+          
         />
         {children}
       </div>
