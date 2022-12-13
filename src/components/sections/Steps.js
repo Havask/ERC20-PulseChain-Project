@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import classNames from 'classnames';
 import { SectionSplitProps } from '../../utils/SectionProps';
 import SectionHeader from './partials/SectionHeader';
 import Image from '../elements/Image';
 import Countdown from 'react-countdown';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const propTypes = {
   ...SectionSplitProps.types
@@ -110,16 +109,16 @@ const KeepCount = () => {
                 Easy as 1-2-3! 
                   </h3>
                 <p className="m-0">
-                    1. Connect your MetaMask.
+                    1. Connect your MetaMask
                 </p>
                   <p className="m-0">
-                    2. Sacrifice to <Link href="https://pulsex.com/" > PulseChain. </Link>
+                    2. PulseChain sacrifice associated to that address
                   </p>
                   <p className="m-0">
                     
                     3.  Claim 10 000 CryptoHearts!
                   </p>
-
+            
               </div>
 
               <div className={
@@ -145,7 +144,7 @@ const KeepCount = () => {
                 Claiming
                   </h3>
                 <p className="m-0">
-                  Claiming is no hassle. MetaMask connects through the browser and the public address is used to check the testnet for the sacrifies. If eligable 10 000 CrytoHearts will be appear in your wallet in a heartbeat. 
+                  Claiming is no hassle. MetaMask connects through the browser and the public address is used to check for the sacrifies. The snapshot of the sacrifice has already been taken so sacrificing now will not be registered. If eligable 10 000 CrytoHearts will be appear in your wallet in a heartbeat. 
                   </p>
               </div>
               <div className={

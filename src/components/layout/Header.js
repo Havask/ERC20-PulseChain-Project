@@ -88,7 +88,7 @@ const Header = ({
 
   const closeModal = (e) => {
     e.preventDefault();
-    setModalActive(false);
+    setModalActive(false); 
   }   
 
 

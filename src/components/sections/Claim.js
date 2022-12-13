@@ -101,34 +101,17 @@ const checkIfWalletIsConnect = async () => {
 };
 
 
-function sendCryptoHearts() {
 
-  const provider = new ethers.providers.EtherscanProvider(null, apiKey);
+const SendCryptoHearts = async () =>  {
+  try {
 
-  const contract_address = "asdasd"
-  const send_account = "0xA6384e0c2e2A52b61b3D0d9849BeA46439D7964D"
-  const to_address = Address;
-  const send_token_amount = 10000; 
-  const private_key = "asdasd"
+    //hvis den p
+    //redirect to other site for claiming the damn thing
 
-  const account = utils.HDNode.fromMnemonic(your_mnemonic_string).derivePath(`m/44'/60'/0'/0/${your_selected_account}`);
-  const signer = new Wallet(account, provider);
+  } catch(error){
+    console.log("Something went wrong @SendCryptoHeart", error )
 
-  window.ethersProvider.getGasPrice() // gasPrice
-
-  const tx = {
-    from: send_account,
-    to: to_address,
-    value: ethers.utils.parseEther(send_token_amount),
-    nonce: window.ethersProvider.getTransactionCount(send_account, "latest"),
-    gasLimit: ethers.utils.hexlify(gas_limit), // 100000
-    gasPrice: gas_price,
   }
-
-  signer.sendTransaction(tx).then((transaction) => {
-    console.dir(transaction)
-    alert("Send finished!")
-  })
 }
 
 const VerifyTransaction = async () => {
@@ -140,7 +123,7 @@ const VerifyTransaction = async () => {
     await axios.get(URL)
     .then(r => {
         console.log(r.data.usd_total)
-        sendCryptoHearts()
+        SendCryptoHearts()
     })
 
     Swal.fire(
@@ -203,6 +186,8 @@ const onSubmit = (e) => {
           <Button onClick={ClaimHandler}>
             Claim CryptoHearts
           </Button>)
+
+
           
         </div>
       </div>

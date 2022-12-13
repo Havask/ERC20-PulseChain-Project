@@ -6,7 +6,6 @@ import ReactGA from 'react-ga';
 import LayoutDefault from './layouts/LayoutDefault';
 import Home from './views/Home';
 
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
@@ -29,8 +28,9 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 logEvent(analytics, 'notification_received');
 
+const TRACKING_ID = "G-EJSXVG6F9J";
 // Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize(TRACKING_ID);
 
 const trackPage = page => {
   ReactGA.set({ page });
@@ -52,13 +52,14 @@ const App = () => {
 
  
   return (
-    <ScrollReveal
-      ref={childRef}
-      children={() => (
-        <Switch>
-          <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-        </Switch>
-      )} />
+      <ScrollReveal
+        ref={childRef}
+        children={() => (
+          <Switch>
+            <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+          </Switch>
+        )} />
+
   );
 }
 

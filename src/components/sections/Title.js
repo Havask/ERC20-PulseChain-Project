@@ -9,6 +9,7 @@ import Modal from '../elements/Modal';
 import {
   BrowserRouter as Router, Switch, Route, Link
 } from "react-router-dom";
+import Swal from 'sweetalert2'
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -124,6 +125,18 @@ const Hero = ({
     className
   );
 
+  const claimClick = () => {
+
+    Swal.fire({
+      title: '<strong>Claim phase not started</strong>',
+      icon: 'info',
+      html: 'Waiting on PulseChain network to launch!',
+      showCloseButton: true,
+      confirmButtonText:
+        'I understand',
+    })
+  }   
+
   return (
 
     <section
@@ -166,7 +179,7 @@ const Hero = ({
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <a onClick={() => window.location.replace("/#about")} className="button button-primary button-wide-mobile button-sm"> Claim here </a>
+                        <a onClick={() => claimClick()} className="button button-primary button-wide-mobile button-sm"> Claim here </a>
                       </li>
                     </ul>}
                 </div>
